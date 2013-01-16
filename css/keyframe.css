@@ -1,0 +1,26 @@
+@keyframes point
+{
+0%   {top:0px; }
+25%  {top:-10px;}
+50%  {top:20px; }
+75%  {top:-5px;}
+100% {top:0px;}
+}
+
+@-moz-keyframes point /* Firefox */
+{
+0%   {top:0px; }
+25%  {top:-10px;}
+50%  {top:20px; }
+75%  {top:-5px;}
+100% {top:0px;}
+}
+
+@-webkit-keyframes point /*Safari and Chrome */
+{
+0%   {top:0px; }
+25%  {top:-10px;}
+50%  {top:20px; }
+75%  {top:-5px;}
+100% {top:0px;}
+}
