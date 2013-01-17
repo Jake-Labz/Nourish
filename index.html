@@ -16,6 +16,14 @@
 		<script type="text/javascript" src="js/js.js"></script>
 		<script type="text/javascript" src="js/marker.js"></script>
 		<script type="text/javascript" src="js/jquery.rotate.1-1.js"></script>
+		<script type="text/javascript" src="js/jquery.validate.min.js"></script>
+
+		<script>
+  			$(document).ready(function(){
+    		$("#commentForm").validate();
+  			});
+ 		 </script>
+
 	</head>
 
 	<body>
@@ -276,21 +284,21 @@
 											<div id="arrow_box"><img id="arrow" src="img/arrow.png"></div>
 										</div>
 											<div id="contact-area">
-												<form method="post" action="contactengine.php">
+												<form method="post" action="contactengine.php" id="commentForm">
 													<div id="left" class="twocol">
 														<label for="Name"><strong>Name:</strong> (required)</label>
-														<input type="text" name="Name" id="Name" />
+														<input type="text" name="Name" id="Name" class="required" />
 				
 														<label for="Tel"><strong>Telephone:</strong></label>
 														<input type="text" name="Tel" id="Tel" />
 	
 														<label for="Email"><strong>Email:</strong> (required)</label>
-														<input type="text" name="Email" id="Email" />
+														<input type="text" name="Email" id="Email" class="required email" />
 													</div>
 													<div class="twocol">
 
 														<label for="Message"><strong>Message:</strong> (required)</label><br />
-														<textarea name="Message" rows="20" cols="20" id="Message"></textarea>
+														<textarea name="Message" rows="20" cols="20" id="Message" class="required"></textarea>
 
 														<input type="submit" name="submit" value="Submit" class="submit-button" />
 													</div>
