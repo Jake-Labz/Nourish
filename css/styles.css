@@ -36,7 +36,7 @@ img {
 
 strong {
 	font-family: 'SourceSansProSemibold';
-	font-size: 24px;
+	font-size: 18px;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -116,20 +116,18 @@ button {
 	font-size: 1.8em;
 	padding: 5px 20px;
 	margin: 20px 0 0;
-}
-
-button a:link, button a:visited, button a:hover, button a:active {
+	box-shadow: 0 0px 2px #666;
+	-webkit-box-shaddow: 0 0px 2px #666;
 	font-family: 'LondrinaSolidRegular';
 	color: #f0ede8;
 	font-size: 30px;
 }
 
-button a:hover, button a:active {
-	color: #fff;
+button:hover {
+	background: url(../img/textures/button_hover.png);
+	box-shadow: 0 0px 1px #999;
+	-webkit-box-shaddow: 0 0px 1px #999;
 }
-
-
-
 
 .clearstyles {
 	clear: both;
@@ -246,6 +244,8 @@ header {
 
 /*Main Content*/
 
+/*shell Rules*/
+
 #wrapper {
 	width: 100%;
 	min-height: 100%;
@@ -286,6 +286,7 @@ header {
 	z-index: 4;
 }
 
+/*Home*/
 
 #slogan {
 	float: left;
@@ -301,6 +302,7 @@ header {
 	background-repeat: no-repeat;
 }
 
+/*About Us*/
 
 .onecol {
 	width: 920px;
@@ -332,7 +334,7 @@ header {
 	background-position: top, bottom;
 	float: left;
 	width: 1000px;
-	height: 350px;
+	height: 360px;
 }
 
 .threecol_bot {
@@ -352,38 +354,26 @@ header {
 
 }
 
-footer {
-	width: 100%;
-}
-
-#inner_footer {
+.icon_box {
 	position: relative;
-	left: 0px;
-	bottom: 0px;
-	height: 34px;
-	padding-top: 0px;
-	width: 100%;
-	background-image:  url(../img/textures/footer.png), url(../img/textures/grass.png);
-	background-repeat: repeat-x;
-	background-position: bottom;
-	z-index: 3;
+	background: url(../img/tag.png) no-repeat;
+	height: 850px;
+	width: 280px;
+	text-align: center;
+	z-index: 6;
 }
 
-#inner_footer p {
-	font-family: 'SourceSansProRegular', Tahoma, sans-serif;
-	font-size: 14px;
-	color: #f6f3ed;
-	padding: 10px 40px;
+.icon {
+	margin-top: 60px;
 }
 
-#grass {
+.about p {
 	position: relative;
-	background: url(../img/textures/grass.png) repeat-x;
-	height: 0px;
-	width: 100%;
-	top: -90px;
-	left: 0;
+	top: -820px;
+	z-index: 4;
 }
+
+/*Locations*/
 
 #map {
 	background: url(../img/map.png) no-repeat center;
@@ -398,8 +388,8 @@ footer {
 	background-repeat: no-repeat;
 	position: relative;
 	z-index: 6;
-	height: 100px;
-	width: 100px;
+	height: 84px;
+	width: 73px;
 }
 
 .shaddow {
@@ -449,36 +439,10 @@ footer {
 	margin: 0 40px;
 }
 
-
-.heading {
-	text-align: left;
-	z-index: 8;
-}
-
 #office_m, #station_m, #school_m, #gym_m, #hospital_m {
 	width: 73px;
 	height: 84px;
 }
-
-.icon_box {
-	position: relative;
-	background: url(../img/tag.png) no-repeat;
-	height: 850px;
-	width: 280px;
-	text-align: center;
-	z-index: 6;
-}
-
-.icon {
-	margin-top: 60px;
-}
-
-.about p {
-	position: relative;
-	top: -820px;
-	z-index: 4;
-}
-
 
 .captions {
 	background: url(../img/textures/debut_light.png);
@@ -508,6 +472,14 @@ footer {
 	padding: 0;
 	margin: 0;
 	border: 1px solid #2f6068;
+	box-shadow: 0 0px 2px #666;
+	-webkit-box-shaddow: 0 0px 2px #666;
+}
+
+.close:hover {
+	background: url(../img/textures/button_hover.png);
+	box-shadow: 0 0px 1px #999;
+	-webkit-box-shaddow: 0 0px 1px #999;
 }
 
 .box_shad {
@@ -540,6 +512,8 @@ footer {
 	font-family: 'LondrinaSolidRegular';
 	opacity: 0.0;
 }
+
+/*Contact Us*/
 
 #conbox {
 	width: 1000px;
@@ -615,12 +589,16 @@ footer {
 }
 
 #arrow {
+	background: url(../img/arrow_hover.png) no-repeat center 100%;
 	width: 82px;
-	height: 81px;
+	height: 82px;
 	margin: 12px auto;
 	position: relative;
 }
 
+#arrow:hover {
+	background: url(../img/arrow_hover_a.png) no-repeat center 100%;
+}
 
 #contact-area {
 	background:  url(../img/textures/border_2.png), url(../img/textures/bedge_blue.png);
@@ -658,15 +636,20 @@ footer {
 	float: right;
 }
 
+#contact_area finput.submit-button:hover {
+	background: url(../img/textures/button_hover.png);
+}
+
 label {
 	float: left;
 	margin-right: 20px;
-	width: 100px;
+	width: 400px;
 	padding-top: 5px;
 	font-size: 1em;
 }
 
-#email_sent, #email_error {
+
+#sent, #error {
 	z-index: 20;
 	background: url(../img/textures/black.png) repeat;
 	width: 100%;
@@ -675,6 +658,43 @@ label {
 	margin: 0;
 	display: none;
 }
+
+/*Footer*/
+
+footer {
+	width: 100%;
+}
+
+#inner_footer {
+	position: relative;
+	left: 0px;
+	bottom: 0px;
+	height: 34px;
+	padding-top: 0px;
+	width: 100%;
+	background-image:  url(../img/textures/footer.png), url(../img/textures/grass.png);
+	background-repeat: repeat-x;
+	background-position: bottom;
+	z-index: 3;
+}
+
+#inner_footer p {
+	font-family: 'SourceSansProRegular', Tahoma, sans-serif;
+	font-size: 14px;
+	color: #f6f3ed;
+	padding: 10px 40px;
+}
+
+#grass {
+	position: relative;
+	background: url(../img/textures/grass.png) repeat-x;
+	height: 0px;
+	width: 100%;
+	top: -90px;
+	left: 0;
+}
+
+/*Responsive*/
 
 @media screen and (min-height: 860px) {
 
@@ -701,3 +721,5 @@ label {
 	}
 
 }
+
+
