@@ -35,13 +35,9 @@ $success = mail($EmailTo, $Subject, $Body, "From: <$EmailFrom>");
 
 // redirect to success page 
 if ($success){
-	?>
-	<script type="text/javascript">$('#sent').fadeIn(300)</script>
-	<?php
+	echo "Thanks, your email has been sent";
 }
 else{
-	?>
-	<script type="text/javascript">$('#error').fadeIn(300)</script>
-	<?php
+	echo "Error";
 }
 ?>
