@@ -97,6 +97,9 @@ a.selected {
 	color: #75031d;
 }
 
+#nav a.selected {
+	color: #75031d;
+}
 
 p.style1 {
 	font-family: 'SourceSansProSemibold';
@@ -107,6 +110,7 @@ p.style1 {
 
 button {	
 	float: right;
+	cursor: pointer;
 	background: url(../img/textures/button.png);
 	text-align: center;
 	border-radius: 5px;
@@ -384,6 +388,7 @@ header {
 
 
 .marker {
+	cursor: pointer;
 	background: url(../img/marker.png);
 	background-repeat: no-repeat;
 	position: relative;
@@ -459,6 +464,7 @@ header {
 }
 
 .close {
+	cursor: pointer;
 	z-index: 22;
 	float: right;
 	position: relative;
@@ -589,6 +595,7 @@ header {
 }
 
 #arrow {
+	cursor: pointer;
 	background: url(../img/arrow_hover.png) no-repeat center 100%;
 	width: 82px;
 	height: 82px;
@@ -605,7 +612,8 @@ header {
 	background-repeat: repeat-x, repeat;
 	background-position: bottom;
 	width: 1000px;
-	padding-bottom: 35px; 
+	height: 258px;
+	padding-bottom: 10px; 
 	z-index: 8;
 	display: none;
 }
@@ -624,6 +632,7 @@ header {
 
 
 #contact-area input.submit-button {
+	cursor: pointer;
 	background: url(../img/textures/button.png);
 	font-family: 'LondrinaSolidRegular';
 	border-radius: 5px;
@@ -636,7 +645,7 @@ header {
 	float: right;
 }
 
-#contact_area finput.submit-button:hover {
+#contact_area input.submit-button:hover {
 	background: url(../img/textures/button_hover.png);
 }
 

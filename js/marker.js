@@ -34,7 +34,7 @@ $(document).ready(function(){
 
 $(document).ready(function(){
    $(".icon_box").mouseenter(function(){
-   $(this).animate({top:"-325px"},"30");
+   $(this).animate({top:"-340px"},"30");
  }); 
 
    $(".icon_box").mouseleave(function(){
