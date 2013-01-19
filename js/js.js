@@ -1,14 +1,14 @@
 $(document).ready(function() {  
-		$('a.link').click(function () {  
-			$('#overwrap').scrollTo($(this).attr('href'), 800);
-			setPosition($(this).attr('href'), '#cloud1', '0px', '800px', '1600px', '2400px')
-			setPosition($(this).attr('href'), '#cloud2', '0px', '400px', '800px', '1600px')
-			setPosition($(this).attr('href'), '#sun_1', '0px', '40px', '80px', '120px')
-			$('a.link').removeClass('selected');  
-			$(this).addClass('selected');
-			return false;  
-		});  
+	$('a.link').click(function () {  
+		$('#overwrap').scrollTo($(this).attr('href'), 800);
+		setPosition($(this).attr('href'), '#cloud1', '0px', '800px', '1600px', '2400px')
+		setPosition($(this).attr('href'), '#cloud2', '0px', '400px', '800px', '1600px')
+		setPosition($(this).attr('href'), '#sun_1', '0px', '40px', '80px', '120px')
+		$('a.link').removeClass('selected');  
+		$(this).addClass('selected');
+		return false;  
 	});
+});
 
 function setPosition(check, div, p1, p2, p3, p4) {
 	if(check==='#home')
@@ -29,5 +29,15 @@ function setPosition(check, div, p1, p2, p3, p4) {
 		}
 };
 
-
-
+$(document).on('submit','form.inline',function(e){
+	var form = $(this);
+	$.ajax({
+		type: form.attr('method').toUpperCase(),
+		url: form.attr('action'),
+		data: form.serialize(),
+		complete: function(jqXHR, status){
+			$('#' + jqXHR.responseText).fadeIn(300);
+		}
+	});
+	e.preventDefault();
+});
