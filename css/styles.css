@@ -107,6 +107,12 @@ p.style1 {
 	padding-bottom: 20px;
 }
 
+p.style2 {
+	font-family: 'SourceSansProSemibold';
+	font-size: 24px;
+	text-align: center;
+}
+
 
 button {	
 	float: right;
@@ -463,7 +469,7 @@ header {
 	border: dashed #999 2px;
 }
 
-.close {
+.close, #s_close, #e_close {
 	cursor: pointer;
 	z-index: 22;
 	float: right;
@@ -482,7 +488,7 @@ header {
 	-webkit-box-shaddow: 0 0px 2px #666;
 }
 
-.close:hover {
+.close:hover, #s_close:hover, #e_clsoe:hover {
 	background: url(../img/textures/button_hover.png);
 	box-shadow: 0 0px 1px #999;
 	-webkit-box-shaddow: 0 0px 1px #999;
@@ -527,10 +533,15 @@ header {
 	overflow: hidden;
 	float: left;
 	margin: 0;
-	background: url(../img/textures/border.png), url(../img/textures/border_2.png), url(../img/textures/bedge_grunge.png);
-	background-repeat: repeat-x, repeat-x, repeat;
-	background-position: top, bottom;
+	text-align: center;
+	background: url(../img/textures/border.png), url(../img/message.png), url(../img/textures/bedge_grunge.png);
+	background-repeat: repeat-x, no-repeat, repeat;
+	background-position: top, bottom center;
 	z-index: 6;
+}
+
+#conbox p {
+	padding-bottom: 20px;
 }
 
 #dropban {
@@ -540,7 +551,7 @@ header {
 	text-align: center;
 	width: 1000px;
 	height: 170px;
-	margin: 0 auto 30px;
+	margin: 0 auto 20px;
 	padding: 30px 0 0;
 	border-bottom: 1px solid #999;
 	box-shadow: 0 0px 5px #333;
@@ -560,7 +571,6 @@ header {
 .twocol {
 	float: left;
 	width: 440px;
-	margin-bottom: 20px;
 	margin-left: 40px;
 }
 
@@ -615,6 +625,7 @@ header {
 	height: 258px;
 	padding-bottom: 10px; 
 	z-index: 8;
+	text-align: left;
 	display: none;
 }
 
@@ -645,7 +656,7 @@ header {
 	float: right;
 }
 
-#contact_area input.submit-button:hover {
+.submit-button:hover {
 	background: url(../img/textures/button_hover.png);
 }
 
@@ -694,6 +705,10 @@ footer {
 	padding: 10px 40px;
 }
 
+#inner_footer a {
+	font-size: 14px;
+}
+
 #grass {
 	position: relative;
 	background: url(../img/textures/grass.png) repeat-x;
@@ -701,6 +716,16 @@ footer {
 	width: 100%;
 	top: -90px;
 	left: 0;
+}
+
+.footnotes {
+	float:left;
+	width: auto;
+}
+
+.footnotes_2 {
+	float: right;
+	width: auto;
 }
 
 /*Responsive*/

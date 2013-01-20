@@ -29,6 +29,77 @@ function setPosition(check, div, p1, p2, p3, p4) {
 		}
 };
 
+$(document).ready(function() {
+    $('#office_m').click(function() {
+    $('#office').fadeIn(300);
+    return false;
+  });
+    $("#of_but, .close").click(function() {
+    $("#office").fadeOut(300);
+  });
+});
+
+$(document).ready(function() {
+    $('#station_m').click(function() {
+    $('#station').fadeIn(300);
+  });
+    $(".close, #tra_but").click(function() {
+    $("#station").fadeOut(300);
+  });
+});
+
+$(document).ready(function() {
+    $('#school_m').click(function() {
+    $('#school').fadeIn(300);
+  });
+    $(".close, #sch_but").click(function() {
+    $("#school").fadeOut(300);
+  });
+});
+
+$(document).ready(function() {
+    $('#hospital_m').click(function() {
+    $('#hospital').fadeIn(300);
+  });
+    $(".close, #hos_but").click(function() {
+    $("#hospital").fadeOut(300);
+  });
+});
+
+$(document).ready(function() {
+    $('#gym_m').click(function() {
+    $('#gym').fadeIn(300);
+  });
+    $(".close, #gym_but").click(function() {
+    $("#gym").fadeOut(300);
+  });
+});
+
+$(document).ready(function() {
+    $("#ok, #retry").click(function() {
+    $("#sent, #error").fadeOut(300);
+    $("form")[0].reset();
+  });
+});
+
+
+
+$(document).ready(function(){
+  var opened = false;
+  $("#arrow_box").click(function(){
+    if(opened){
+      $("#formbox").animate({"top": "+=275px"}, "slow");
+      $('#arrow').rotateLeft(180);
+    }else{
+      $("#formbox").animate({"top": "-=275px"}, "slow");
+      $('#arrow').rotateLeft(180);
+    }
+    $("#contact-area").slideToggle("slow");
+    $("#arrow_box .close").toggle();
+    opened = opened ? false : true;
+  });
+});
+
 $(document).on('submit','form.inline',function(e){
 	var form = $(this);
 	$.ajax({
@@ -40,4 +111,5 @@ $(document).on('submit','form.inline',function(e){
 		}
 	});
 	e.preventDefault();
+
 });
